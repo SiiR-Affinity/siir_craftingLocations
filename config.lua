@@ -7,14 +7,14 @@ Config.Locations = {
             {
                 Name = "crystal_meth_bag",
                 DisplayName = "Cut Crystal Meth",
-                Quantity = 1,
+                Quantity = 10,
                 MetaData = {},
-                Time = 100,
+                Time = 3000,
                 Level = 1,
                 XPGain = 0.01,
                 Recipe = {
-                    {'Crystal Meth', 'crystal_meth_bulk', 1, {}, false},
-                    {'Gram Bag', 'gram_bag', 1, {}, false}
+                    {'Crystal Meth', 'crystal_meth_bulk', 1, {}, true},
+                    {'Gram Bag', 'gram_bag', 1, {}, true}
                 }
             }
         }
