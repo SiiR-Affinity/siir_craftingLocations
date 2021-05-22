@@ -40,8 +40,6 @@ Citizen.CreateThread(function()
             DrawText3D(closest, '[~g~E~s~] Open Crafting Menu')
             wait = 3
             if IsControlJustReleased(0, 38) then
-                -- local items = json.decode(Config.Locations[closestCraft].Items)
-                print(Config.Locations[closestCraft].Items.Recipe)
                 TriggerEvent("weasel-crafting:customMenu", Config.Locations[closestCraft].Items, 1)
             end
         else wait = 1000 end
