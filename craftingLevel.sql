@@ -1,0 +1,2 @@
+ALTER TABLE `users`
+    ADD IF NOT EXISTS `crafting_level` FLOAT NOT NULL DEFAULT '1';

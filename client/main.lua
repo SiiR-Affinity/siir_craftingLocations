@@ -34,13 +34,19 @@ end)
 
 Citizen.CreateThread(function()
     local wait = 1000
+    local XPGain
     while true do
         Citizen.Wait(wait)
         if inRange then
             DrawText3D(closest, '[~g~E~s~] Open Crafting Menu')
             wait = 3
             if IsControlJustReleased(0, 38) then
-                TriggerEvent("weasel-crafting:customMenu", Config.Locations[closestCraft].Items, 1)
+                for k, v in pairs(Config.Locations[closestCraft].Items) do
+                    XPGain = v.XPGain
+                end
+                ESX.TriggerServerCallback('siir_craftingLocations:checkLevel', function(craftLevel)
+                    TriggerEvent("weasel-crafting:customMenu", Config.Locations[closestCraft].Items, craftLevel)
+                end)
             end
         else wait = 1000 end
     end
