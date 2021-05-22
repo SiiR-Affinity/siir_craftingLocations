@@ -14,7 +14,7 @@ Config.Locations = {
                 XPGain = 0.01,
                 Recipe = {
                     {'Crystal Meth', 'crystal_meth_bulk', 1, {}, true},
-                    {'Gram Bag', 'gram_bag', 1, {}, true}
+                    {'Gram Bag', 'gram_bag', 10, {}, true}
                 }
             }
         }
